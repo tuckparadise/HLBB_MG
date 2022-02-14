@@ -1,0 +1,36 @@
+﻿create   procedure [dbo].[aaNotificationOfPayment_GetRecordByARN]
+@arn nvarchar(max) =null 
+as
+begin
+	
+	SELECT [arn]
+      ,[RunningIDForCurrentSubmission]
+      ,[FacilityAccountNumber]
+      ,[PaymentMode]
+      ,[PayeeID]
+      ,[PayeeName]
+      ,[BeneficiaryBank]
+      ,[BeneficiaryBankAccountNumber]
+      ,[AmountDisburse]
+      ,[PaymentReference]
+      ,[PaymentDescription]
+      ,[PaymentCreatedDate]
+      ,[PaymentUpdatedDate]
+      ,[DisMakerEmail]
+      ,[DisMakerSubmissionDate]
+      ,[DisCheckerEmail]
+      ,[DisCheckerApprovedDate]
+      ,[RCOMakerEmail]
+      ,[RCOMakerApprovedDate]
+      ,[RCOCheckerEmail]
+      ,[RCOCheckerApprovedDate]
+      ,[AccountFrom]
+      ,[DevName]
+      ,[SolName]
+      ,[CreatedDate]
+      ,[UpdatedDate]
+      ,[Locked]
+      ,[RunningID]	  	 
+	FROM [dbo].[aaNotificationOfPayment] 		
+	where arn = @arn
+end

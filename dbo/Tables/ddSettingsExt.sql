@@ -1,0 +1,12 @@
+﻿CREATE TABLE [dbo].[ddSettingsExt](
+	[ProjectLoginTrialsNumberOfLoginAllowed] [int] NULL,
+	[ProjectLoginTrialsExpiryPeroidInMinutes] [int] NULL,
+	[ProjectDormantIDReportPeriodInDays] [int] NULL,
+	[ProjectLoginPasswordHistoryCount] [int] NULL,
+	[ProjectLoginPasswordMaxExpiryDays] [int] NULL,
+	[ProjectLoginPasswordMaxExpiryWarningDays] [int] NULL,
+	[ProjectPasswordMinCharacters] [int] NULL,
+	[ProjectSessionInMinutes] [int] NULL,
+	[lastupdateddate] [datetime] NULL,
+	[lastupdateduser] [nvarchar](100) NULL
+) ON [PRIMARY]

@@ -1,0 +1,38 @@
+﻿CREATE       procedure [dbo].[usp_SQLValuerDPSubmission_selectARN_ForPDFForm]
+@arn nvarchar(max) = null 
+as
+begin
+
+	SELECT [ARN]
+		  ,[ValuerCode]
+		  ,[ValuerReportAttachmentURL]
+		  ,[ValuerReportAttachment]
+		  ,[ValuerReportAttachmentDate]
+		  ,[VRInstructionDate]
+		  ,[ValuerReference]
+		  ,[PersonInChargeName]
+		  ,[VUpdateInfoStatus]
+		  ,[VLowerOMVStatus]
+		  ,[VUpdateInfoStatusOthers]
+		  ,[VLowerOMVReasons]
+		  ,[DateOfValuation]
+		  ,[MarketValue]
+		  ,[FireInsuranceValue]
+		  ,[InvoiceNumber]
+		  ,[ShortfallAmount]
+		  ,[Declaration]
+		  ,[Status]
+		  ,[ValuationFeeFinancedByBankFlag]
+		  ,[LF_PayeeName]
+		  ,[LF_BilledAmount]
+		  ,[LF_AccountNumber]
+		  ,[LF_Bank]
+		  ,[LF_PaymentDescription]
+		  ,[LF_PaymentMode]
+		  ,[Completed]
+		  ,[OutputPDFID]
+		  ,[CreatedDate]
+		  ,[UpdatedDate]
+	  FROM [dbo].[SQLValuerDPSubmission_staging]
+	  where arn = @arn 
+end

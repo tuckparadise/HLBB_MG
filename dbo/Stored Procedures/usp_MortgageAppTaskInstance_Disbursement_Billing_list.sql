@@ -1,0 +1,22 @@
+﻿create   procedure [dbo].[usp_MortgageAppTaskInstance_Disbursement_Billing_list]
+as
+begin
+
+	SELECT 
+		case when workflow = 'DisbDUMakerBillingApproval' then 'Progressive Billing- Disbursement Maker' 
+			when  workflow = 'DisbDUCheckerBillingApproval' then 'Progressive Billing- Disbursement Checker' 
+			when  workflow = 'DisbRCOMakerBillingApproval' then 'Progressive Billing- RCO Maker' 
+			when  workflow = 'DisbRCOCheckerBillingApproval' then 'Progressive Billing- RCO Checker' 
+			end as [WorkflowName],
+		[workflow]
+      ,[arn]
+      ,[TaskOwner]
+      ,[CreatedDate]
+      ,[UpdatedDate]
+      ,[CreatedUser]
+      ,[UpdatedUser]
+	  ,BillingRunningID
+  FROM [dbo].[MortgageAppTaskInstance_billing]
+  where [workflow] in ('DisbDUMakerBillingApproval','DisbDUCheckerBillingApproval','DisbRCOMakerBillingApproval','DisbRCOCheckerBillingApproval')
+
+end

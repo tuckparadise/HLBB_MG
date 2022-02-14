@@ -1,0 +1,20 @@
+﻿CREATE TABLE [dbo].[ddProjectDisbursementSubmission_draft_PermenentTempTable](
+	[DraftID] [bigint] NULL,
+	[PrimaryCustomerName] [nvarchar](max) NULL,
+	[ARN] [nvarchar](max) NULL,
+	[FinancingAmount] [money] NULL,
+	[AddressLine1] [nvarchar](max) NULL,
+	[BillingAmount] [money] NULL,
+	[Attachment1] [nvarchar](max) NULL,
+	[Attachment2] [nvarchar](max) NULL,
+	[DeveloperCode] [nvarchar](max) NULL,
+	[ProjectCode] [nvarchar](max) NULL,
+	[PhaseCode] [nvarchar](max) NULL,
+	[DeveloperLoginID] [nvarchar](max) NULL,
+	[CreatedDate] [datetime] NULL,
+	[UpdatedDate] [datetime] NULL,
+	[ExtraField1] [nvarchar](max) NULL,
+	[ExtraField2] [nvarchar](max) NULL,
+	[ExtraField3] [nvarchar](max) NULL,
+	[ExtraField4] [nvarchar](max) NULL
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
